@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login-ValtOfCodes</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="VaultOfCodeLogo/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="VaultOfCodeLogo/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="VaultOfCodeLogo/favicon-16x16.png">
+<link rel="manifest" href="VaultOfCodeLogo/site.webmanifest">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch&family=Poppins&family=Young+Serif&display=swap" rel="stylesheet">
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script src="https://kit.fontawesome.com/6a50e0837f.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Sign In</h1>
+                <span id="b">Using your email</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">Forget Your Password?</a>
+                <button onclick="openWebsite()">Sign In</button>
+            </form>
+
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Create Account</h1>
+                <span id="b">Using your email for registeration</span>
+                <input type="text" id="fullname" placeholder="First name" required>
+                <input type="text" id="fullname" placeholder="Last name" required>
+
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" oninput="checkPasswordStrength(this.value)" placeholder="Password" required>
+                <div id="password-strength"></div>
+
+                <input type="password" id="confirm-password" name="confirm-password" oninput="validatePassword()"
+                    placeholder="confirm-password" required>
+                <span id="message"></span>
+
+                <input type="date" id="dob" name="dob" required>
+
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <br>
+                <label id="side">profile-pic:</label>
+                <input type="file" id="profile-pic" placeholder="profile-pic" name="profile-pic" accept="image/*" required>
+
+                <label for="terms">I agree to the Terms and Conditions:</label>
+                <input type="checkbox" id="terms" name="terms" required>
+                <button class="link" onclick="openWebsite()">Sign Up</button>
+
+
+            </form>
+
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome!</h1>
+                    <p>don't have an Account? click below</p>
+                    <button class="hidden" id="login">Sign Up</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello</h1>
+                    <p>Already have an Account ? just click below and sign-in</p>
+                    <button class="hidden" id="register">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
